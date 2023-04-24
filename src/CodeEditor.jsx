@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-function CodeEditor(answer) {
+function CodeEditor({ answer }) {
   const [code, setCode] = useState('');
 
   useEffect(() => {
     setCode(answer);
-    console.log(code);
   }, [answer]);
+
   const handleCopyClick = () => {
     navigator.clipboard.writeText(code);
   };
