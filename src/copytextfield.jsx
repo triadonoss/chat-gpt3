@@ -5,6 +5,7 @@ function CodeEditor(answer) {
 
   useEffect(() => {
     setCode(answer);
+    console.log(code);
   }, [answer]);
   const handleCopyClick = () => {
     navigator.clipboard.writeText(code);
