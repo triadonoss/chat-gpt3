@@ -68,6 +68,7 @@ function App() {
       <div className="card-search">
         <form onSubmit={(e) => e.preventDefault()}>
           <label htmlFor="input-completion">Type in your Question:</label>
+          <br />
           <input
             className="search-box"
             id="input-completion"
