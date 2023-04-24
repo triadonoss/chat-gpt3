@@ -81,7 +81,7 @@ function App() {
             Go
           </button>
           <br />
-          <div>
+          <div className="results-section">
             {!suggestion && !isLoading && <p>...</p>}
             {isLoading && <p>loading</p>}
             {!isLoading && suggestion && <CodeEditor answer={suggestion} />}

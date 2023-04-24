@@ -68,6 +68,10 @@
   font-weight: 700;
 }
 
+.results-section {
+  margin-top: 1.5rem;
+}
+
 .editor {
   position: relative;
   width: 100%;
