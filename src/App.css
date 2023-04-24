@@ -56,6 +56,18 @@
   background-color: rgb(68, 112, 112);
 }
 
+.search-box {
+  padding: 0.3rem;
+  border-radius: 0.3rem 0 0 0.3rem;
+  border: none;
+}
+.submit-btn {
+  padding: 0.3rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+  border: none;
+  font-weight: 700;
+}
+
 .editor {
   position: relative;
   width: 100%;

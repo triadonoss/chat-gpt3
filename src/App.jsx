@@ -67,22 +67,25 @@ function App() {
 
       <div className="card-search">
         <form onSubmit={(e) => e.preventDefault()}>
-          <label htmlFor="input-completion">Type text suggestion</label>
-          <br />
+          <label htmlFor="input-completion">Type in your Question:</label>
           <input
+            className="search-box"
             id="input-completion"
             type="text"
-            placeholder="type here and get suggestions"
+            placeholder="Write your legal questions here"
             value={prompts}
             onChange={(e) => handleChange(e.target.value)}
           />
+          <button className="submit-btn" onClick={handleClick}>
+            Go
+          </button>
           <br />
           <div>
             {!suggestion && !isLoading && <p>...</p>}
             {isLoading && <p>loading</p>}
             {!isLoading && suggestion && <CodeEditor answer={suggestion} />}
           </div>
-          <button onClick={handleClick}>Get Completion Text</button>
+
           <br />
           <small>Implemented by RedLds</small>
         </form>

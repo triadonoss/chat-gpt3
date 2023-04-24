@@ -31,7 +31,7 @@ function CodeEditor({ answer }) {
       fontFamily: "'Fira Code', monospace",
       fontSize: '14px',
       lineHeight: '1.5',
-      padding: '10px',
+      padding: '15px',
       color: '#fff',
       border: 'none',
       outline: 'none',
@@ -57,7 +57,7 @@ function CodeEditor({ answer }) {
     <div style={styles.editor}>
       <textarea style={styles.codeInput} value={code} onChange={handleChange} />
       <button style={styles.copyButton} onClick={handleCopyClick}>
-        Copy
+        Copy Answer
       </button>
     </div>
   );
