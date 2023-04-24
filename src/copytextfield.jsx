@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function CodeEditor(answer) {
   const [code, setCode] = useState('');
 
+  useEffect(() => {
+    setCode(answer);
+  }, [answer]);
   const handleCopyClick = () => {
     navigator.clipboard.writeText(code);
   };
 
   const handleChange = (event) => {
-    //setCode(event.target.value);
-    setCode(answer);
+    setCode(event.target.value);
+    //setCode(answer);
   };
 
   const styles = {
