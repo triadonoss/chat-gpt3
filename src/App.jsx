@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import logo from './assets/logo.svg';
+import './CodeEditor.css';
+import CodeEditor from './copytextfield.jsx';
 
 function App() {
   const [prompts, setPrompts] = useState('');
@@ -79,11 +81,7 @@ function App() {
           <div>
             {!suggestion && !isLoading && <p>...</p>}
             {isLoading && <p>loading</p>}
-            {!isLoading && suggestion && (
-              <textarea name="w3review" rows="4" cols="50">
-                {suggestion}
-              </textarea>
-            )}
+            {!isLoading && !suggestion && <CodeEditor answer={suggestion} />}
           </div>
           <button onClick={handleClick}>Get Completion Text</button>
           <br />
