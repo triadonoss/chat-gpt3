@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function CodeEditor() {
+function CodeEditor(answer) {
   const [code, setCode] = useState('');
 
   const handleCopyClick = () => {
@@ -8,7 +8,8 @@ function CodeEditor() {
   };
 
   const handleChange = (event) => {
-    setCode(event.target.value);
+    //setCode(event.target.value);
+    setCode(answer);
   };
 
   const styles = {
@@ -18,7 +19,7 @@ function CodeEditor() {
       backgroundColor: '#292D3E',
       borderRadius: '5px',
       boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      margin: '0 auto'
+      margin: '0 auto',
     },
     codeInput: {
       width: '100%',

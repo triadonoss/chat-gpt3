@@ -61,8 +61,7 @@ function App() {
           <a href="https://www.flthompson.com/family-law-attorney-bakersfield-finding-the-right-one-for-you/">
             Best Family Law Attorney
           </a>{' '}
-          on{' '}
-          <a href="https://www.flthompson.com/">https://www.flthompson.com.</a>
+          on <a href="https://www.flthompson.com/">Thompson Law.</a>
         </h2>
       </div>
 
@@ -81,7 +80,7 @@ function App() {
           <div>
             {!suggestion && !isLoading && <p>...</p>}
             {isLoading && <p>loading</p>}
-            {!isLoading && !suggestion && <CodeEditor answer={suggestion} />}
+            {!isLoading && suggestion && <CodeEditor answer={suggestion} />}
           </div>
           <button onClick={handleClick}>Get Completion Text</button>
           <br />
