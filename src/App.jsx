@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import logo from './assets/logo.svg';
 
 function App() {
   const [prompts, setPrompts] = useState('');
@@ -40,37 +41,55 @@ function App() {
 
   return (
     <div className="App">
+      <img
+        src={logo}
+        alt="Mallet with an opening and closing tags for Ask anything logo"
+      />
       <h1>
-        <span>GPT-3 Completion App</span> <br />{' '}
-        <span>"text-davinci-003" model from OpenAI</span>
+        <span>Ask Anything!</span> <br />{' '}
       </h1>
-      <h2>
-        You can find the{' '}
-        <a href="https://www.flthompson.com/family-law-attorney-bakersfield-finding-the-right-one-for-you/">
-          Best Family Law Attorney
-        </a>{' '}
-        on https://www.flthompson.com.
-      </h2>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="input-completion">Type text suggestion</label>
-        <br />
-        <input
-          id="input-completion"
-          type="text"
-          placeholder="type here and get suggestions"
-          value={prompts}
-          onChange={(e) => handleChange(e.target.value)}
-        />
-        <br />
-        <div>
-          {!suggestion && !isLoading && <p>...</p>}
-          {isLoading && <p>loading</p>}
-          {suggestion}
-        </div>
-        <button onClick={handleClick}>Get Completion Text</button>
-        <br />
-        <small>Implemented by RedLds</small>
-      </form>
+      <p>
+        All Legal Questions can be Answerd here 100% Free of Charge. This
+        includes on the matters of Family Law, Criminal Law, Probate Court and
+        more.
+      </p>
+      <div className="card">
+        <h2>
+          You can find the{' '}
+          <a href="https://www.flthompson.com/family-law-attorney-bakersfield-finding-the-right-one-for-you/">
+            Best Family Law Attorney
+          </a>{' '}
+          on{' '}
+          <a href="https://www.flthompson.com/">https://www.flthompson.com.</a>
+        </h2>
+      </div>
+
+      <div className="card-search">
+        <form onSubmit={(e) => e.preventDefault()}>
+          <label htmlFor="input-completion">Type text suggestion</label>
+          <br />
+          <input
+            id="input-completion"
+            type="text"
+            placeholder="type here and get suggestions"
+            value={prompts}
+            onChange={(e) => handleChange(e.target.value)}
+          />
+          <br />
+          <div>
+            {!suggestion && !isLoading && <p>...</p>}
+            {isLoading && <p>loading</p>}
+            {!isLoading && suggestion && (
+              <textarea name="w3review" rows="4" cols="50">
+                {suggestion}
+              </textarea>
+            )}
+          </div>
+          <button onClick={handleClick}>Get Completion Text</button>
+          <br />
+          <small>Implemented by RedLds</small>
+        </form>
+      </div>
     </div>
   );
 }

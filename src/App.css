@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.card {
+  border: 1px solid gray;
+  padding: 0;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  background-color: rgb(82, 71, 12);
+}
+.card-search {
+  border: 1px solid gray;
+  padding: 2rem;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  background-color: rgb(68, 112, 112);
+}
