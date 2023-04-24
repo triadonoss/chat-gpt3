@@ -80,7 +80,7 @@ function App() {
           <div>
             {!suggestion && !isLoading && <p>...</p>}
             {isLoading && <p>loading</p>}
-            {!isLoading && suggestion && <CodeEditor answer={suggestion} />}
+            {!isLoading && suggestion && suggestion}
           </div>
           <button onClick={handleClick}>Get Completion Text</button>
           <br />
