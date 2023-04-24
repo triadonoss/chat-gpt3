@@ -8,7 +8,8 @@ function App() {
 
   const models = async () => {
     setIsLoading(true);
-    const list = await fetch('https://tan-clumsy-squid.cyclic.app', { // https://nice-erin-basket-clam-tie.cyclic.app
+    const list = await fetch('https://tan-clumsy-squid.cyclic.app', {
+      // https://nice-erin-basket-clam-tie.cyclic.app
       method: 'POST',
       headers: {
         Accept: '*/*',
@@ -43,10 +44,15 @@ function App() {
         <span>GPT-3 Completion App</span> <br />{' '}
         <span>"text-davinci-003" model from OpenAI</span>
       </h1>
+      <h2>
+        You can find the{' '}
+        <a href="https://www.flthompson.com/family-law-attorney-bakersfield-finding-the-right-one-for-you/">
+          Best Family Law Attorney
+        </a>{' '}
+        on https://www.flthompson.com.
+      </h2>
       <form onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="input-completion">
-          Type text suggestion
-        </label>
+        <label htmlFor="input-completion">Type text suggestion</label>
         <br />
         <input
           id="input-completion"
